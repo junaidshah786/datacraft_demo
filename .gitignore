@@ -1,0 +1,9 @@
+secrets.toml
+backup.py
+backup_excel_to_db.py
+*.ipynb
+__pycache__
+test.py
+test.ipynb
+pandasai.log
+myenv
