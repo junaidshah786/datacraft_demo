@@ -207,6 +207,8 @@ def main():
                         # it fetches the answer using the sql command geenrated
                         data, dataframe_for_table = fetch_data(st.session_state['db_connection'], sql_query)
                         print("data: ",data)
+                        if data == 500:
+                            return
                         if any(element is None for element in data[0]):
                             st.error("No data found, Please recheck your query.")
                             return

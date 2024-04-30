@@ -83,7 +83,9 @@ def fetch_data(connection,query):
             st.error(f"Error: Invalid query! Please provide correct information.")
 
     except mysql.connector.Error as err:
-        st.error(f"Error: {err}")
+        # st.error(f"Error: {err}")
+        st.error(f"Please try rephrasing your Question")
+        return 500, None
         
         
         
