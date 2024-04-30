@@ -37,7 +37,7 @@ def get_texual_insights(sql_query,data):
       
         {"role": "system", "content": 'You are an expert Data Analyst.'},
         {"role": "user", "content": prompt}
-    ] 
+    ]   
 
 
     response = openai.ChatCompletion.create(

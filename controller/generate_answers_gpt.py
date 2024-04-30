@@ -80,13 +80,12 @@ def convert_question_to_sql_query(customer_query, schema):
 def convert_schema_to_sql_query_suggestions(schema):
     print('\n\n schema for suggestions generation:',schema)
     prompt = f"""
-        your job is to generate 10 questions that can be asked based on the schema \
-        Scrictly make sure the attributes and table names to be used for formulating the questions should be same as the provided schema\
-        schema is a dictionary with table names as keys and table columns as their respective values \
-        schema can have a single table only or multiple relational tables\
-        while formulating the questions consider the principles of relational database concepts\
-        make sure the column names are choosen from the provided schema only.\
-        do not make complex questions.
+        generate five questions based on the given schema: Schema: ```{schema}```
+        The questions should be such that it can be easily converted into a mysql query.
+        The questions to be generated should be based on the provided schema only.
+        Do not make complex questions.
+        One Question should be such that its sql query response includes  x-axis and y-axis example: number of orders in each country.
+
         the response shoud be in a list format only.
         
         Schema: ```{schema}```
